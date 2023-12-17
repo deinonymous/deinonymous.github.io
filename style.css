@@ -4,21 +4,35 @@
   font-display: swap;
 }
 
+a {
+  color: #404040;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Hedvig";
-  background-color: #f0eaea;
+  font-size: 1.15rem;
   color: #6b2d2d;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  width: min(800px, calc(100vw - 5rem));
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  padding: 0rem 1rem;
+  border-radius: 0 0 1rem 1rem;
   background-color: #e2e2e2;
+  box-shadow: 0px 3px 3px #a5a5a544;
+  border: 10px solid #d4d4d4;
+  border-top: unset;
 }
 
 header * {
@@ -28,26 +42,87 @@ header * {
   color: #a46c6c
 }
 
+header a, header i {
+  font-size: 1rem;
+}
+
+main {
+  min-height: calc(100vh - 11rem);
+  width: min(750px, calc(100vw - 7rem));
+  background-color: #f0eaea;
+}
+
 main, footer {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 3px 3px #a46c6c44;
+  border: 10px solid #e5d8d8;
 }
 
-main img {
-  width: 250px;
-  border-radius: 250px;
-  margin: 2rem auto;
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: baseline;
+  padding-bottom: 1rem;
+}
+
+.bio {
+  display: block;
+  text-indent: 1rem;
+}
+
+.bio img {
+  width: min(200px, 30vw);
+  border-radius: 30%;
+  margin: 1rem;
   border: 10px solid #e5d8d8;
-  margin: 1rem auto;
+  float: left;
+}
+
+li {
+  padding-bottom: 1rem;
+}
+
+p, li {
+  line-height: 1.2;
+  word-spacing: 4px;
+}
+
+main h3 {
+  text-align: center;
+  margin: 0;
 }
 
 footer {
-  margin-top: 1rem;
+  background-color: #e2e2e2;
+  margin-bottom: 2rem;
   gap: 1rem;
 }
 
 footer * {
   padding: 0;
   margin: 0;
+}
+
+@media screen and (min-width: 1505px) {
+  footer {
+    align-self: baseline;
+    position: sticky;
+    bottom: 2.1rem;
+    left: 2rem;
+  }
 }
