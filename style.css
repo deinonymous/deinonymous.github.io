@@ -43,7 +43,8 @@ header * {
 }
 
 header a, header i {
-  font-size: 1rem;
+  font-size: min(1.3rem, 3.9vw);
+  padding-right: min(0.2rem, 0.6vw);
 }
 
 main {
@@ -108,7 +109,9 @@ main h3 {
 }
 
 footer {
+  border: 10px solid #d4d4d4;
   background-color: #e2e2e2;
+  box-shadow: 0px 3px 3px #a5a5a544;
   margin-bottom: 2rem;
   gap: 1rem;
 }
