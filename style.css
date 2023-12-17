@@ -43,8 +43,8 @@ header * {
 }
 
 header a, header i {
-  font-size: min(1.3rem, 3.9vw);
-  padding-right: min(0.2rem, 0.6vw);
+  font-size: min(1.5rem, 4.5vw);
+  padding-right: min(0.3rem, 0.9vw);
 }
 
 main {
@@ -119,13 +119,4 @@ footer {
 footer * {
   padding: 0;
   margin: 0;
-}
-
-@media screen and (min-width: 1505px) {
-  footer {
-    align-self: baseline;
-    position: sticky;
-    bottom: 2.1rem;
-    left: 2rem;
-  }
 }
