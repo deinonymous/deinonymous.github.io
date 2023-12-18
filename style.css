@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Hedvig";
-  src: url("./public/HedvigLettersSerif-Regular-VariableFont_opsz.ttf");
+  font-family: "Ubuntu";
+  src: url("./public/Ubuntu-Regular.ttf");
   font-display: swap;
 }
 
@@ -12,17 +12,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Hedvig";
+  font-family: "Ubuntu";
   font-size: 1.15rem;
   color: #6b2d2d;
+  background-color: #f0eaea;
   font-weight: 400;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
   position: sticky;
   top: 0;
+  overflow-y: hidden;
   width: min(800px, calc(100vw - 5rem));
   flex-direction: column;
   justify-content: end;
@@ -49,19 +52,15 @@ header a, header i {
 
 main {
   min-height: calc(100vh - 11rem);
-  width: min(750px, calc(100vw - 7rem));
-  background-color: #f0eaea;
+  width: 100vw;
 }
 
 main, footer {
-  margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 3px 3px #a46c6c44;
-  border: 10px solid #e5d8d8;
 }
 
 .title {
@@ -84,6 +83,7 @@ main, footer {
 .bio {
   display: block;
   text-indent: 1rem;
+  width: min(750px, calc(100vw - 5rem));
 }
 
 .bio img {
@@ -106,17 +106,58 @@ p, li {
 main h3 {
   text-align: center;
   margin: 0;
+  padding-top: 1rem;
 }
 
 footer {
-  border: 10px solid #d4d4d4;
-  background-color: #e2e2e2;
-  box-shadow: 0px 3px 3px #a5a5a544;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
   gap: 1rem;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 footer * {
+  width: 250px;
+  text-align: center;
   padding: 0;
   margin: 0;
+}
+
+hr {
+  height: 0;
+  border-color: #6b2d2d;
+  border-style: solid;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #BFBFBF;
+  }
+
+  .bio img {
+    border-color: #4a3030;
+  }
+
+  header * {
+    color: #935b5b
+  }
+
+  header {
+    background-color: #150909;
+    box-shadow: 0px 3px 3px #00000044;
+    border-color: #4a3030;
+  }
+
+  body {
+    color: #c1acac;
+    background-color: #1D1D1D;
+  }
+
+  hr {
+    border-color: #c1acac;
+    border-style: solid;
+  }
 }
