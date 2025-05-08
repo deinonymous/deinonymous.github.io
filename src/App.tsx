@@ -1,11 +1,26 @@
+import styled from "styled-components";
 import "./App.css";
+import { Paper } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router";
+
+const AppContainer = styled(Paper)`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <>
-      <h1>deinonymous.github.io</h1>
-      <p>I'm working on this site. 🔨</p>
-    </>
+    <AppContainer>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<h1>Home</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </AppContainer>
   );
 }
 
