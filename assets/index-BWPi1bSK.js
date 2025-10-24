@@ -145,17 +145,19 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   ${({$isMobile:e})=>`
     flex-direction: ${e?`column`:`row`};
   `}
-`,dd=({icon:e,to:t,children:n,$isMobile:r,$expanded:i,setExpanded:a})=>(0,V.jsx)(ud,{variant:`text`,color:`inherit`,startIcon:e,onClick:()=>i?document.querySelector(t)?.scrollIntoView({block:`center`,behavior:`smooth`}):a(!0),$isMobile:r,$expanded:i,children:n}),fd=()=>{let e=od(`(max-width:600px)`),[t,n]=(0,_.useState)(e);return(0,_.useEffect)(()=>{let t=()=>{console.log(`User is scrolling`),n(window.scrollY<100||!e)};return window.addEventListener(`scroll`,t),()=>{window.removeEventListener(`scroll`,t)}},[e]),(0,V.jsxs)(sd,{$isMobile:e,$expanded:t,children:[(0,V.jsx)(cd,{variant:`h5`,onClick:()=>document.querySelector(`#hero`)?.scrollIntoView({block:`center`,behavior:`smooth`}),children:`Discover Taniti`}),(0,V.jsxs)(ld,{$expanded:t,$isMobile:e,children:[(0,V.jsx)(dd,{icon:(0,V.jsx)(Dl,{}),to:`#travel`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Travel`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(El,{}),to:`#explore`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Explore`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(Ol,{}),to:`#relax`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Relax`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(kl,{}),to:`#essentials`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Essentials`})})]})]})},pd=Ln.div`
+`,dd=({icon:e,to:t,children:n,$isMobile:r,$expanded:i,setExpanded:a})=>(0,V.jsx)(ud,{variant:`text`,color:`inherit`,startIcon:e,onClick:()=>i?document.querySelector(t)?.scrollIntoView({block:`center`,behavior:`smooth`}):a(!0),$isMobile:r,$expanded:i,children:n}),fd=()=>{let e=od(`(max-width:600px)`),[t,n]=(0,_.useState)(e);return(0,_.useEffect)(()=>{let t=()=>{console.log(`User is scrolling`),n(window.scrollY===0||!e)};return window.addEventListener(`scroll`,t),()=>{window.removeEventListener(`scroll`,t)}},[e]),(0,V.jsxs)(sd,{$isMobile:e,$expanded:t,children:[(0,V.jsx)(cd,{variant:`h5`,onClick:()=>document.querySelector(`#hero`)?.scrollIntoView({block:`center`,behavior:`smooth`}),children:`Discover Taniti`}),(0,V.jsxs)(ld,{$expanded:t,$isMobile:e,children:[(0,V.jsx)(dd,{icon:(0,V.jsx)(Dl,{}),to:`#travel`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Travel`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(El,{}),to:`#explore`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Explore`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(Ol,{}),to:`#relax`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Relax`})}),(0,V.jsx)(dd,{icon:(0,V.jsx)(kl,{}),to:`#essentials`,$isMobile:e,$expanded:t,setExpanded:n,children:(!e||t)&&(0,V.jsx)(`span`,{children:`Essentials`})})]})]})},pd=Ln.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 48px;
+  padding: 64px 0;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 123, 0.6), rgba(255, 0, 0, 0.4));
   background-position: center;
   background-size: cover;
   color: white;
-  height: calc(100vh);
+  height: 100vh;
+  min-height: 600px;
   text-align: center;
 
   p {
