@@ -89,7 +89,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       console.log("User is scrolling");
-      setExpanded(window.scrollY < 100 || !isMobile);
+      setExpanded(window.scrollY === 0 || !isMobile);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -100,7 +100,7 @@ const Header = () => {
   return (
     <StyledAppBar $isMobile={isMobile} $expanded={expanded}>
       <StyledTypography
-        variant="h5"
+        variant="h6"
         onClick={() =>
           document
             .querySelector("#hero")

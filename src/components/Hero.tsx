@@ -6,12 +6,14 @@ const HeroDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 48px;
+  padding: 64px 0;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 123, 0.6), rgba(255, 0, 0, 0.4));
   background-position: center;
   background-size: cover;
   color: white;
-  height: calc(100vh);
+  height: 100vh;
+  min-height: 768px;
   text-align: center;
 
   p {
