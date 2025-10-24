@@ -157,7 +157,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   background-size: cover;
   color: white;
   height: 100vh;
-  min-height: 600px;
+  min-height: 768px;
   text-align: center;
 
   p {
